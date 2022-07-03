@@ -64,6 +64,7 @@ void loop()
 	float gz = g.gyro.z - gz_avg;
 	if (fabs(ax) <= 0.05) (ax=0);
 	if (fabs(ay) <= 0.05) (ay=0);
+	if (fabs(gz) <= 0.05) (ay=0);
 	P.update(time2,ax,ay,gz);
 	//Buttons Logic
 	b1 = digitalRead(PIN_W);
@@ -108,8 +109,6 @@ void loop()
 	else		bleKeyboard.release('s');
 
 
-
-	
 }
 
 void setOffset()

@@ -57,6 +57,6 @@ void Position::update(float readTime, float accX, float accY, float gyroZ)
 
   void Position::clearP()   {p1=zer0;p2=zer0;}//Zeros the drift Data.
   void Position::clearV()   {v1=zer0;v2=zer0;}//Zeros the velocity data.
-  void Position::clearAng(){angZ=0; angZ_prev=0;}
-  void Position::clearAll() {clearP();clearV();}
+  void Position::clearAng() {angZ=0; angZ_prev=0;}
+  void Position::clearAll() {clearP();clearV();clearAng();}
 
